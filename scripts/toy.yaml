@@ -1,0 +1,21 @@
+data_dir: &DIR ../data/toy/
+emb_dir: !join [*DIR, embeddings/]
+tweet_file: !join [*DIR, input/transactions.txt]
+poi_file: !join [*DIR, input/pois.txt]
+model_dir: !join [*DIR, model/]
+model_pickled_path: !join [*DIR, model/pickled.model]
+model_embeddings_dir: !join [*DIR, output/embeddings/]
+case_dir: !join [*DIR, output/case/]
+
+voca_min: 0
+voca_max: 20000
+update_tweets: 0
+dim: 300
+negative: 1
+alpha: 0.05 # learning rate
+epoch: 50
+nt_list: ['w', 'u']
+predict_type: ['w']
+load_existing_model: 0
+test_batch_num: 10
+regu_weight: 0.1
